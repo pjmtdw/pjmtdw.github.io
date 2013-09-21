@@ -12,8 +12,8 @@
     -# Pull in the page title
     %title= current_page.data.title
 
-    %meta{:name => "description", :content => ""}
-    %meta{:name => "author", :content => ""}
+    %meta{:name => "description", :content => "#{current_page.data.description}"}
+    %meta{:name => "author", :content => "宇野算譜工房"}
     -# You may wish to remove the 'initial scale=1.0' for non-responsive layouts
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
@@ -25,7 +25,7 @@
   %body{:class => current_page.data.bodyclass}
     /[if lt IE 7]
       %p.chromeframe
-        You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
+        お使いのブラウザはちょっと古いので，<a href="http://browsehappy.com/">バージョンアップ</a>することをお勧めします．
     .container
       %header
         %h1= current_page.data.title
@@ -35,21 +35,26 @@
         = yield
 
       %footer
-        %p &copy; #{copyright_years(2011)} AmicusUser
+        %p
+          &copy; #{copyright_years(2013)} 
+          %a(href='/misc/author.html') 宇野算譜工房
 
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
-    :javascript
-      window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.9.0.min.js"><\/script>')
+    -# = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"
+    -# :javascript
+    -#  window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.9.0.min.js"><\/script>')
 
     -# Holder.js - canvas-generated placeholder images for prototyping
-    = javascript_include_tag "libs/holder"
+    -# = javascript_include_tag "libs/holder"
 
-    = javascript_include_tag "plugins", "script"
+    -# = javascript_include_tag "plugins", "script"
 
-    -# Google Analytics: change UA-XXXXX-X to be your site's ID.
-    -# uncomment when deploying
-    / :javascript
-    /   var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    /   (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    /   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    /   s.parentNode.insertBefore(g,s)}(document,'script'));
+    -# Google Analytics
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44209140-1', 'pjmtdw.github.io');
+      ga('send', 'pageview');
+
