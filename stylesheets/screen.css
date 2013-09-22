@@ -477,8 +477,8 @@ footer {
 
 /* line 34, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
 h3.section {
-  border-left: 0.8em solid #003366;
-  border-bottom: 1px solid #003366;
+  border-left: 0.8em solid teal;
+  border-bottom: 1px solid teal;
   padding-left: 0.3em; }
 
 /* line 39, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
@@ -490,12 +490,43 @@ hr.short-bar {
 dt {
   font-weight: bold; }
 
+/* line 44, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+em {
+  font-weight: bold;
+  font-style: normal; }
+
 /* line 47, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+code {
+  display: block;
+  margin-left: 1em;
+  white-space: pre-line; }
+
+/* line 52, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+div.subsection {
+  margin-left: 1em; }
+
+/* line 55, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+.figure {
+  display: inline-block;
+  text-align: center; }
+  /* line 58, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+  .figure .label {
+    font-weight: bold; }
+
+/* line 61, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+a[href] {
+  color: #003366; }
+
+/* line 64, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+a[href]:hover {
+  color: blue; }
+
+/* line 69, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
 .container img {
   max-width: 100%;
   height: auto; }
 
-/* line 51, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+/* line 73, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
 .panel {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -506,13 +537,19 @@ dt {
   border: 3px solid gray;
   background-color: #ffffcc; }
 
-/* line 57, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+/* line 79, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
 .os-label {
   display: inline-block;
   border: 1px dotted green;
   background-color: white;
   color: #003333;
   padding: 3px; }
+
+/* line 86, /home/maho/pjmtdw.github.io/source/stylesheets/screen.css.sass */
+img.fuda-example:hover {
+  -webkit-filter: contrast(120%) brightness(80%);
+  -moz-filter: contrast(120%) brightness(80%);
+  filter: contrast(120%) brightness(80%); }
 
 @media print {
   /* line 11, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */

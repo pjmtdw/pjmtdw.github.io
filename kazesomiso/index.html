@@ -38,13 +38,13 @@
           <dt>百人一首の画像の一括作成</dt>
           <dd>文字のフォントや色などを指定してやれば100首分の取り札画像を自動生成します．</dd>
           <dt>札落とし機能</dt>
-          <dd>作成した札画像で「札落とし（流しとも言う）」ができます．</dd>
+          <dd>作成した札画像で「札落とし（別名: 流し）」ができます．</dd>
           <dt>札の種類</dt>
-          <dd>取り札だけでなく読み札や決まり字かるたを作ることができます．</dd>
+          <dd>取り札だけでなく読み札や決まり字かるたなどを作ることができます．</dd>
           <dt>百人一首以外の札</dt>
           <dd>いろはがるたや上毛かるた，俳句や長歌などの札画像も作れます．</dd>
           <dt>印刷機能</dt>
-          <dd>一枚が競技かるた用の札サイズ(53mm x 74mm)になるように印刷できます．この機能を使えばPDF出力することもできます．</dd>
+          <dd>一枚が競技かるた用の札サイズ(幅53mm，高さ74mm)になるように印刷できます．この機能を使えばPDFに出力することもできます．</dd>
         </dl>
         <h3 class='section'>ダウンロード</h3>
         <div>
@@ -62,15 +62,15 @@
         </div>
         <hr class='short-bar'>
         <div>
-          <strong>※注意1:</strong>
-          かぜそみそを使用して作成した画像は個人，商用などに関わりなく自由に使用していただいて構いません．
+          <em>※補足1:</em>
+          かぜそみそを使用して作成した画像は個人，商用などに関わりなく自由に利用していただいて構いません．
           ただし，使用するフォントによってはそのフォントを使用した画像の用途に制限がある可能性があるので注意して下さい．
         </div>
         <div>
-          <strong>※注意2:</strong>
+          <em>※補足2:</em>
           Windows XPより前のOSをお使いの方は，
           <a href='gdiplus.zip'>[gdiplus.zip]</a>
-          を解凍したgdiplus.dllを，かぜそみそと同じフォルダに置けばより高画質な画像を作れます．
+          を解凍したgdiplus.dllを，かぜそみそと同じフォルダに置けばより高品質な画像を作れます．
         </div>
         <h3 class='section'>サンプル画像</h3>
         <div>
@@ -78,46 +78,51 @@
         </div>
         <div>
           <a href='example/fuda001.gif'>
-            <img height='222' src='example/fuda001_small.gif' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda001_small.gif' width='159'>
           </a>
           <a href='example/fuda002.gif'>
-            <img height='222' src='example/fuda002_small.gif' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda002_small.gif' width='159'>
           </a>
           <a href='example/fuda003.gif'>
-            <img height='222' src='example/fuda003_small.jpg' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda003_small.jpg' width='159'>
           </a>
           <a href='example/fuda004.gif'>
-            <img height='222' src='example/fuda004_small.jpg' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda004_small.jpg' width='159'>
           </a>
           <a href='example/fuda005.jpg'>
-            <img height='222' src='example/fuda005_small.jpg' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda005_small.jpg' width='159'>
           </a>
           <a href='example/fuda006.jpg'>
-            <img height='222' src='example/fuda006_small.jpg' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda006_small.jpg' width='159'>
           </a>
           <a href='example/fuda007.gif'>
-            <img height='222' src='example/fuda007_small.gif' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda007_small.gif' width='159'>
           </a>
           <a href='example/fuda008.gif'>
-            <img height='222' src='example/fuda008_small.gif' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda008_small.gif' width='159'>
           </a>
           <a href='example/fuda009.gif'>
-            <img height='222' src='example/fuda009_small.gif' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda009_small.gif' width='159'>
           </a>
           <a href='example/fuda010.gif'>
-            <img height='222' src='example/fuda010_small.gif' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda010_small.gif' width='159'>
           </a>
           <a href='example/fuda011.gif'>
-            <img height='222' src='example/fuda011_small.gif' width='159'>
+            <img class='fuda-example' height='222' src='example/fuda011_small.gif' width='159'>
           </a>
           <a href='example/fuda012.gif'>
-            <img height='222' src='example/fuda012_small.gif' width='163'>
+            <img class='fuda-example' height='222' src='example/fuda012_small.gif' width='163'>
           </a>
         </div>
         <h3 class='section'>PDF作成例</h3>
         <div>
-          以下のPDFファイルをAdobe Acrobat Readerで印刷するときに「ページの拡大／縮小」を「なし」にすると，
-          一枚の札サイズが 幅 53 mm 高さ 74 mm になるはずです．
+          印刷対象を
+          <a href='http://www.forest.impress.co.jp/library/software/cubepdf/'>[CubePDF]</a>
+          などのPDF出力に対応した仮想プリンタにすればPDFファイルに出力することができます．
+        </div>
+        <div>
+          以下はかぜそみそで作ったPDFファイルの例です．これをAdobe Acrobat Readerで印刷するときに「ページの拡大／縮小」を「なし」にすると，
+          競技かるた用の札サイズ(幅53mm，高さ74mm)になるはずです．
           <div>
             PDF作成例その1:
             <a href='torifuda.pdf'>[取り札PDF (35KB)]</a>

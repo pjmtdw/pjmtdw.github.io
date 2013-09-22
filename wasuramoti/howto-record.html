@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class='no-js'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>わすらもち用読み音声データの作成</title>
+    <meta content='' name='description'>
+    <meta content='宇野算譜工房' name='author'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link href="/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/libs/modernizr-2.6.1.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class='chromeframe'>
+        お使いのブラウザはちょっと古いので，<a href="http://browsehappy.com/">バージョンアップ</a>することをお勧めします．
+      </p>
+    <![endif]-->
+    <div class='container'>
+      <header>
+        <h1>わすらもち用読み音声データの作成</h1>
+      </header>
+      <div id='main-content' role='main'>
+        <div>
+          <a href='/'>[TOP]</a>
+          <a href='/wasuramoti/'>[わすらもち]</a>
+        </div>
+        <h3 class='section'>概要</h3>
+        <div>
+          このページではわすらもち用の自作の読み音声データの作成方法について説明します．百人一首の読み上げ音声を入手する手段は主に下記の二つでしょう．
+        </div>
+        <ul>
+          <li>マイクを使って読みが上手い人の読み上げを録音する</li>
+          <li>CDからリッピングする</li>
+        </ul>
+        <div>
+          前者は知り合いの公認もしくは専任読手に頼んでみましょう．後者に関しては現在は競技かるたに使えるCDはなかなか売っていませんが，頑張って見つけて下さい．
+        </div>
+        <div>
+          という訳で無事録音する準備もしくはCDを入手できたら，以下の手順でわすらもちの読手に追加します．CDからリッピングする場合は1,2,6の手順だけで大丈夫です．
+        </div>
+        <ol>
+          <li>
+            <a href='#section1'>音声データ形式とファイル名</a>
+          </li>
+          <li>
+            <a href='#section2'>音声ファイルの置き場所</a>
+          </li>
+          <li>
+            <a href='#section3'>マイクによる録音</a>
+          </li>
+          <li>
+            <a href='#section4'>ノイズ除去</a>
+          </li>
+          <li>
+            <a href='#section5'>無音での分割</a>
+          </li>
+          <li>
+            <a href='#section6'>Ogg Vorbisに変換</a>
+          </li>
+        </ol>
+        <a name='section1'></a>
+        <h3 class='section'>1. 音声データ形式とファイル名</h3>
+        <div>
+          わすらもちが対応している音声データは「モノラル」の「Ogg Vorbis形式」です．各ファイルの名前は以下のようになっている必要があります．
+        </div>
+        <code><p><em>[読手名]</em>_<em>[3桁の札番号]</em>_<em>[上の句=1,下の句=2]</em>.ogg</p></code>
+        <div>
+          例えば，稲葉修至さんの有馬山の上の句なら，「稲葉修至_058_1.ogg」，
+          山下迪子さんの小倉山の下の句なら，「山下迪子_026_2.ogg」 となります．ただし，序歌は「[読手名]_000_2.ogg」
+          という名前にして下さい．
+        </div>
+        <div>
+          したがって全部で(上の句＋下の句)×百首＋序歌＝201個のファイルとなる訳です．
+        </div>
+        <hr class='short-bar'>
+        <div>
+          <em>※補足1:</em> 札番号一覧は<a href='fudanum.html'>こちら</a>にあります．
+        </div>
+        <div>
+          <em>※補足2:</em> Android版の場合はなにはづの上の句を「[読手名]_000_1.ogg」にして202個のファイルでも大丈夫です．
+        </div>
+        <div>
+          <em>※補足3:</em> <a href="http://www.vector.co.jp/soft/winnt/util/se131133.html"> [Flexible Renamer] </a> などファイル名を一括変換するソフトを利用すると楽かもしれません．
+        </div>
+        <a name='section2'></a>
+        <h3 class='section'>2. 音声ファイルの置き場所</h3>
+        <em>Windows版の場合</em>
+        <div class='subsection'>
+          わすらもちと同じフォルダに
+          <code><p><em>@[読手名]</em></p></code>
+          というフォルダを作って音声ファイルを入れれば，メニューに読手が追加されます．
+        </div>
+        <hr class='short-bar'>
+        <em>Android版の場合</em>
+        <div class='subsection'>
+          SDカードもしくは内部ストレージに
+          <code><em>wasuramoti_reader/[読手名]/</em></code>
+          というフォルダを作ってその中に音声ファイルを入れ，わすらもちを起動すれば[設定]&rArr;[読み手] に「EXT:/&lt;&gt;/[読手名]」のような項目が追加されます．
+          <div>
+            <em>※補足1:</em> 例えばinabaさんの小倉山の下の句なら「wasuramoti_reader/inaba/inaba_026_2.ogg」という感じです．
+          </div>
+          <div>
+            <em>※補足2:</em> 日本語ファイル名や空白文字が通るかどうかは試していないので，フォルダ名は英数字にしておくのが無難です．
+          </div>
+          <div>
+            <em>※補足3:</em> サブフォルダは深さ5までしか探索していないので，あまり深い階層にwasuramoti_readerフォルダを置かないで下さい．
+          </div>
+        </div>
+        <a name='section3'></a>
+        <h3 class='section'>3. マイクによる録音</h3>
+        まずは録音です．適当なマイクと音声編集ソフトを用意します．
+        今回はフリーの <a href="http://audacity.sourceforge.net/">[Audacity]</a> というソフトを使います．
+        <div class='figure'>
+          <img height='117' src='img/howto-record-001.jpg' width='430'>
+          <div class='label'>図1: 録音開始</div>
+        </div>
+        <ol>
+          <li>赤丸の所をクリックすれば録音開始です．</li>
+          <li>最初に序歌を読んで，それから札番号順に百首読んで下さい．</li>
+          <li>録音し終わったら[ファイル(<u>F</u>)]&rArr;[別名で書き出し (<u>E</u>) WAV...]でWAVファイルに保存します．</li>
+          <li>百首で大体30分間なので，Mono/22050Hz/16-bitなら約75MBのWAVE音声ファイルになるはずです．</li>
+        </ol>
+        <div>
+          <em>※補足:</em> 上の句と下の句の間および，下の句と上の句の間には5秒以上の間を空けて下さい．
+        </div>
+        <a name='section4'></a>
+        <h3 class='section'>4. ノイズ除去</h3>
+        <div>
+          よほど良い録音環境でない限り，出来上がったWAV音声ファイルには雑音が入っていると思います．
+        </div>
+        <div>
+          Audacityにはノイズ除去機能が付いているのでそれを使います．
+        </div>
+        <ol>
+          <li>まず「どういう音が雑音なのか」をソフトに教えるために雑音の部分をどこでもいいので選択します(図2)</li>
+          <li>次に[効果(<u>c</u>)]&rArr;[ノイズの除去...]を選択すると，図3のような画面が出るので[ノイズプロファイルの取得]をクリック．そうするといったん画面が閉じます．</li>
+        </ol>
+        <div class='figure'>
+          <img height='197' src='img/howto-record-002.jpg' width='430'>
+          <div class='label'>図2: 雑音部分を選択</div>
+        </div>
+        <div class='figure'>
+          <img height='302' src='img/howto-record-003.gif' width='210'>
+          <div class='label'>図3: ノイズプロファイル取得</div>
+        </div>
+        <hr class='short-bar'>
+        <div>
+          これでどういう音が雑音なのか分かったので，ソフトはこの情報を元に雑音を除去する訳です．
+        </div>
+        <ol>
+          <li>[編集(<u>E</u>)]&rArr;[選択...]&rArr;[全て(<u>A</u>)]で音声全体を選択します(図4)</li>
+          <li>再び[効果(<u>c</u>)]&rArr;[ノイズの除去...]を選択すると図5のような画面が出るので，今度は[ノイズの除去]をクリック(図5)</li>
+          <li>これでノイズが除去されます(図6)</li>
+        </ol>
+        <div class='figure'>
+          <img height='194' src='img/howto-record-004.jpg' width='430'>
+          <div class='label'>図4: 雑音を除去したい範囲を選択</div>
+        </div>
+        <div class='figure'>
+          <img height='302' src='img/howto-record-005.gif' width='210'>
+          <div class='label'>図5: 雑音除去開始</div>
+        </div>
+        <div class='figure'>
+          <img height='196' src='img/howto-record-006.jpg' width='430'>
+          <div class='label'>図6: 雑音除去完了</div>
+        </div>
+        <a name='section5'></a>
+        <h3 class='section'>5. 無音での分割</h3>
+        <div>でき上がったものは一つの巨大な音声ファイルなので，これを各首ごとに分割する必要があります．</div>
+        <div>Audacityには無音を検知して分割してくれる機能があるのでそれを使います．</div>
+        <ol>
+          <li>音声全体を選択してから[解析]&rArr;[Silence Finder...]をクリックすると図7のような画面が出るので，OKボタンをクリックします．</li>
+          <ul>
+            <li>[Silence Level:<i>x</i>] -<i>x</i> デシベル以下の音を無音とみなす</li>
+            <li>[Minimum silence duration:<i>y</i>] 無音が<i>y</i> 秒続いたらラベルを設置</li>
+            <li>[Place label:<i>z</i>] 無音が終了する <i>z</i> 秒前にラベルを設置</li>
+          </ul>
+          <li>すると図8のように下側に「Label Track」というのが表示されます．</li>
+        </ol>
+        <div class='figure'>
+          <img height='170' src='img/howto-record-007.gif' width='434'>
+          <div class='label'>図7: Silence Finder</div>
+        </div>
+        <div class='figure'>
+          <img height='212' src='img/howto-record-008.jpg' width='430'>
+          <div class='label'>図8: 赤いラベルが検知した無音部分</div>
+        </div>
+        <hr class='short-bar'>
+        <div>
+          (<em>Windows版のみ</em>) このラベルを元に分割するのですが，このまま分割すると序歌の上の句と下の句で分割してしまうので，その部分のラベルを削除する必要があります．
+        </div>
+        <ol>
+          <li>
+            「Label Track」の該当する部分を選択してから[編集(<u>E</u>)]&rArr;[無音(<u>S</u>)]を選びます(図9)
+          </li>
+        </ol>
+        <div class='figure'>
+          <img height='214' src='img/howto-record-009.jpg' width='430'>
+          <div class='label'>図9: 検知したラベルの削除</div>
+        </div>
+        <div class='figure'></div>
+        <hr class='short-bar'>
+        <ol>
+          <li>[ファイル(<u>F</u>)]&rArr;[複数ファイルの書き出し...]を選択すると図10のような画面が出るので下記のように設定します．</li>
+          <ul>
+            <li>「書き出し形式」を「Ogg Vorbis」にします．</li>
+            <li>「連続した番号づけ」にチェックを入れます．</li>
+            <li>「ファイル名の前部」に読手名を入れます．</li>
+          </ul>
+          <li>「書き出し」をクリックすると，[読手名]-001.ogg ～ [読手名]-nnn.ogg という複数のファイルに分割されます．</li>
+        </ol>
+        <div class='figure'>
+          <img height='224' src='img/howto-record-010.gif' width='429'>
+          <div class='label'>図10: 音声ファイルの出力</div>
+        </div>
+        <div>
+          出力したファイルはOgg Vorbis形式なので，次の章「6. Ogg Vorbisに変換」は飛ばして下さい．
+        </div>
+        <a name='section6'></a>
+        <h3 class='section'>6. Ogg Vorbisに変換</h3>
+        音声ファイルがOgg Vorbis形式でない場合はOgg Vorbisに変換する必要があります．
+        今回はfoobar2000というフリーウェアを使います．
+        <ol>
+          <li>ソフトを <a href="http://www.foobar2000.org/">[foobar2000]</a> からダウンロードしてインストールします．</li>
+          <li>Ogg Vorbisエンコーダーを <a href="http://www.geocities.jp/aoyoume/aotuv/">[aoTuV]</a> からダウンロード(最新版のWin32 reference binaryを選択)して展開し，oggenc.exeをfoobar2000をインストールしたフォルダに入れておきます．</li>
+          <li>変換する音声ファイルをfoobar2000にドラッグアンドドロップして選択します．</li>
+          <li>右クリックして[C<u>o</u>nvert]&rArr;[<u>C</u>onvert to...]をクリックします．</li>
+          <li>[Ogg Vorbis, 160kbps, q5.0]を選択してOKを押します．</li>
+          <li>「oggenc.exeの場所はどこ？」と聞かれるので，oggenc.exeを置いたフォルダを指定します．</li>
+        </ol>
+      </div>
+      <footer>
+        <p>
+          &copy; 2013
+          <a href='/misc/author.html'>宇野算譜工房</a>
+        </p>
+      </footer>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-44209140-1', 'pjmtdw.github.io');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
