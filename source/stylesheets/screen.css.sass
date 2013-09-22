@@ -32,8 +32,8 @@ footer
   text-align: right
 
 h3.section
-  border-left: 0.8em solid #036
-  border-bottom: 1px solid #036
+  border-left: 0.8em solid teal
+  border-bottom: 1px solid teal
   padding-left: 0.3em
 
 hr.short-bar
@@ -41,6 +41,28 @@ hr.short-bar
   margin-left: 40%
 dt
   font-weight: bold
+em
+  font-weight: bold
+  font-style: normal
+code
+  display: block
+  margin-left: 1em
+  white-space: pre-line
+
+div.subsection
+  margin-left: 1em
+
+.figure
+  display: inline-block
+  text-align: center
+  .label
+    font-weight: bold
+
+a[href]
+  color: #036
+
+a[href]:hover
+  color: blue
 
 .container
   // Force images to scale down to their container widths.
@@ -60,6 +82,9 @@ dt
   background-color: white
   color: #033
   padding: 3px
+
+img.fuda-example:hover
+  @include filter(contrast(120%) brightness(80%)) 
 
 // H5BP helper classes & mixins.
 // @include h5bp-helpers

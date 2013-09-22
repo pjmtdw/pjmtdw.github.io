@@ -1,0 +1,201 @@
+---
+title: わすらもち用読み音声データの作成
+---
+%div
+  %a(href='/') [TOP]
+  %a(href='/wasuramoti/') [わすらもち]
+%h3.section 概要
+%div
+  このページではわすらもち用の自作の読み音声データの作成方法について説明します．百人一首の読み上げ音声を入手する手段は主に下記の二つでしょう．
+%ul
+  %li マイクを使って読みが上手い人の読み上げを録音する
+  %li CDからリッピングする
+%div
+  前者は知り合いの公認もしくは専任読手に頼んでみましょう．後者に関しては現在は競技かるたに使えるCDはなかなか売っていませんが，頑張って見つけて下さい．
+
+%div
+  という訳で無事録音する準備もしくはCDを入手できたら，以下の手順でわすらもちの読手に追加します．CDからリッピングする場合は1,2,6の手順だけで大丈夫です．
+%ol
+  %li
+    %a(href='#section1') 音声データ形式とファイル名
+  %li
+    %a(href='#section2') 音声ファイルの置き場所
+  %li
+    %a(href='#section3') マイクによる録音 
+  %li
+    %a(href='#section4') ノイズ除去
+  %li
+    %a(href='#section5') 無音での分割
+  %li
+    %a(href='#section6') Ogg Vorbisに変換
+-#  %li
+-#    %a(href='#section7') 出来上がりのテスト
+
+%a(name='section1')
+%h3.section 1. 音声データ形式とファイル名
+%div
+  わすらもちが対応している音声データは「モノラル」の「Ogg Vorbis形式」です．各ファイルの名前は以下のようになっている必要があります．
+%code
+  :markdown
+    *[読手名]*\_*[3桁の札番号]*\_*[上の句=1,下の句=2]*.ogg
+%div
+  例えば，稲葉修至さんの有馬山の上の句なら，「稲葉修至_058_1.ogg」，
+  山下迪子さんの小倉山の下の句なら，「山下迪子_026_2.ogg」 となります．ただし，序歌は「[読手名]_000_2.ogg」
+  という名前にして下さい．
+%div
+  したがって全部で(上の句＋下の句)×百首＋序歌＝201個のファイルとなる訳です．
+%hr.short-bar
+%div
+  <em>※補足1:</em> 札番号一覧は<a href='fudanum.html'>こちら</a>にあります．
+%div
+  <em>※補足2:</em> Android版の場合はなにはづの上の句を「[読手名]_000_1.ogg」にして202個のファイルでも大丈夫です．
+%div
+  <em>※補足3:</em> <a href="http://www.vector.co.jp/soft/winnt/util/se131133.html"> [Flexible Renamer] </a> などファイル名を一括変換するソフトを利用すると楽かもしれません．
+
+%a(name='section2')
+%h3.section 2. 音声ファイルの置き場所
+%em Windows版の場合
+%div.subsection
+  わすらもちと同じフォルダに
+  %code
+    :markdown
+      *@[読手名]*
+  というフォルダを作って音声ファイルを入れれば，メニューに読手が追加されます．
+%hr.short-bar
+%em Android版の場合
+%div.subsection
+  SDカードもしくは内部ストレージに
+  %code
+    %em wasuramoti_reader/[読手名]/
+  というフォルダを作ってその中に音声ファイルを入れ，わすらもちを起動すれば[設定]&rArr;[読み手] に「EXT:/&lt;&gt;/[読手名]」のような項目が追加されます．
+  %div
+    <em>※補足1:</em> 例えばinabaさんの小倉山の下の句なら「wasuramoti_reader/inaba/inaba_026_2.ogg」という感じです．
+  %div
+    <em>※補足2:</em> 日本語ファイル名や空白文字が通るかどうかは試していないので，フォルダ名は英数字にしておくのが無難です．
+  %div
+    <em>※補足3:</em> サブフォルダは深さ5までしか探索していないので，あまり深い階層にwasuramoti_readerフォルダを置かないで下さい．
+%a(name='section3')
+%h3.section 3. マイクによる録音
+まずは録音です．適当なマイクと音声編集ソフトを用意します．
+今回はフリーの <a href="http://audacity.sourceforge.net/">[Audacity]</a> というソフトを使います．
+.figure
+  %img(src='img/howto-record-001.jpg' width=430 height=117)
+  .label 図1: 録音開始
+%ol
+  %li 赤丸の所をクリックすれば録音開始です．
+  %li 最初に序歌を読んで，それから札番号順に百首読んで下さい．
+  %li 録音し終わったら[ファイル(<u>F</u>)]&rArr;[別名で書き出し (<u>E</u>) WAV...]でWAVファイルに保存します．
+  %li 百首で大体30分間なので，Mono/22050Hz/16-bitなら約75MBのWAVE音声ファイルになるはずです．
+%div
+  <em>※補足:</em> 上の句と下の句の間および，下の句と上の句の間には5秒以上の間を空けて下さい．
+
+%a(name='section4')
+%h3.section 4. ノイズ除去
+%div
+  よほど良い録音環境でない限り，出来上がったWAV音声ファイルには雑音が入っていると思います．
+%div
+  Audacityにはノイズ除去機能が付いているのでそれを使います．
+
+%ol
+  %li まず「どういう音が雑音なのか」をソフトに教えるために雑音の部分をどこでもいいので選択します(図2)
+  %li 次に[効果(<u>c</u>)]&rArr;[ノイズの除去...]を選択すると，図3のような画面が出るので[ノイズプロファイルの取得]をクリック．そうするといったん画面が閉じます．
+.figure
+  %img(src="img/howto-record-002.jpg" width=430 height=197)
+  .label 図2: 雑音部分を選択
+.figure
+  %img(src="img/howto-record-003.gif" width=210 height=302)
+  .label 図3: ノイズプロファイル取得
+%hr.short-bar
+%div
+  これでどういう音が雑音なのか分かったので，ソフトはこの情報を元に雑音を除去する訳です．
+%ol
+  %li [編集(<u>E</u>)]&rArr;[選択...]&rArr;[全て(<u>A</u>)]で音声全体を選択します(図4)
+  %li 再び[効果(<u>c</u>)]&rArr;[ノイズの除去...]を選択すると図5のような画面が出るので，今度は[ノイズの除去]をクリック(図5)
+  %li これでノイズが除去されます(図6)
+
+.figure
+  %img(src="img/howto-record-004.jpg" width=430 height=194)
+  .label 図4: 雑音を除去したい範囲を選択
+.figure
+  %img(src="img/howto-record-005.gif" width=210 height=302)
+  .label 図5: 雑音除去開始
+.figure
+  %img(src="img/howto-record-006.jpg" width=430 height=196)
+  .label 図6: 雑音除去完了
+
+%a(name='section5')
+%h3.section 5. 無音での分割
+
+%div でき上がったものは一つの巨大な音声ファイルなので，これを各首ごとに分割する必要があります．
+%div Audacityには無音を検知して分割してくれる機能があるのでそれを使います．
+%ol
+  %li 音声全体を選択してから[解析]&rArr;[Silence Finder...]をクリックすると図7のような画面が出るので，OKボタンをクリックします．
+  %ul
+    %li [Silence Level:<i>x</i>] -<i>x</i> デシベル以下の音を無音とみなす
+    %li [Minimum silence duration:<i>y</i>] 無音が<i>y</i> 秒続いたらラベルを設置
+    %li [Place label:<i>z</i>] 無音が終了する <i>z</i> 秒前にラベルを設置
+  %li すると図8のように下側に「Label Track」というのが表示されます．
+.figure
+  %img(src="img/howto-record-007.gif" width=434 height=170)
+  .label 図7: Silence Finder
+.figure
+  %img(src="img/howto-record-008.jpg" width=430 height=212)
+  .label 図8: 赤いラベルが検知した無音部分
+%hr.short-bar
+%div
+  (<em>Windows版のみ</em>) このラベルを元に分割するのですが，このまま分割すると序歌の上の句と下の句で分割してしまうので，その部分のラベルを削除する必要があります．
+%ol
+  %li
+    「Label Track」の該当する部分を選択してから[編集(<u>E</u>)]&rArr;[無音(<u>S</u>)]を選びます(図9)
+
+.figure
+  %img(src="img/howto-record-009.jpg" width=430 height=214)
+  .label 図9: 検知したラベルの削除
+.figure
+%hr.short-bar
+%ol
+  %li [ファイル(<u>F</u>)]&rArr;[複数ファイルの書き出し...]を選択すると図10のような画面が出るので下記のように設定します．
+  %ul
+    %li 「書き出し形式」を「Ogg Vorbis」にします．
+    %li 「連続した番号づけ」にチェックを入れます．
+    %li 「ファイル名の前部」に読手名を入れます．
+  %li 「書き出し」をクリックすると，[読手名]-001.ogg ～ [読手名]-nnn.ogg という複数のファイルに分割されます．
+.figure
+  %img(src="img/howto-record-010.gif" width=429 height=224)
+  .label 図10: 音声ファイルの出力
+%div
+  出力したファイルはOgg Vorbis形式なので，次の章「6. Ogg Vorbisに変換」は飛ばして下さい．
+
+%a(name='section6')
+%h3.section 6. Ogg Vorbisに変換
+
+音声ファイルがOgg Vorbis形式でない場合はOgg Vorbisに変換する必要があります．
+今回はfoobar2000というフリーウェアを使います．
+%ol
+  %li ソフトを <a href="http://www.foobar2000.org/">[foobar2000]</a> からダウンロードしてインストールします．
+  %li Ogg Vorbisエンコーダーを <a href="http://www.geocities.jp/aoyoume/aotuv/">[aoTuV]</a> からダウンロード(最新版のWin32 reference binaryを選択)して展開し，oggenc.exeをfoobar2000をインストールしたフォルダに入れておきます．
+  %li 変換する音声ファイルをfoobar2000にドラッグアンドドロップして選択します．
+  %li 右クリックして[C<u>o</u>nvert]&rArr;[<u>C</u>onvert to...]をクリックします．
+  %li [Ogg Vorbis, 160kbps, q5.0]を選択してOKを押します．
+  %li「oggenc.exeの場所はどこ？」と聞かれるので，oggenc.exeを置いたフォルダを指定します．
+
+-# %a(name='section7')
+-# %h3.section 7. 出来上がりのテスト(Windows版のみ) 
+
+-# ○わすらもちで使う音声ファイルは読手ごとに量子化ビット数などを揃える必要があります
+-# &nbsp;[読手(<u>Y</u>)]&rArr;[チェック(<u>C</u>)]で揃っているかどうかチェックすることができます
+-# &nbsp;この時に表示されるHEAD,TAILというのは，
+-# &nbsp;HEAD: 読みが始まった位置(秒数)
+-# &nbsp;TAIL: 読みが終わった位置(秒数)
+-# &nbsp;です．わすらもちはファイルの先頭のHEAD秒と最後のTAIL秒を切り取ってから
+-# &nbsp;間に空白を作って繋げて再生します．
+-# ○config.txtを編集すれば設定を変更できます．各項目の意味を説明します．
+-# &nbsp;THRESHOLD = <i>t</i>
+-# &nbsp;&nbsp;音量が <i>t</i> 以下の音を無音とみなします．0.01なら1%です
+-# &nbsp;&nbsp;下の句の終わりと上の句の始まりはこれを元に検出します
+-# &nbsp;SIMONOKU_FADEOUT = <i>n</i>
+-# &nbsp;&nbsp;下の句の最後に <i>n</i> 秒間のフェードアウトをかけます
+-# &nbsp;KAMINOKU_FADEIN  = <i>m</i>
+-# &nbsp;&nbsp;上の句が始まる前に <i>m</i> 秒間のフェードインをかけます
+-# &nbsp;MA_SIMONOKU      = <i>k</i>
+-# &nbsp;&nbsp;下の句と上の句の間です．普通は1.0秒です

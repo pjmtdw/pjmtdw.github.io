@@ -13,13 +13,13 @@ description: 「かぜそみそ」はかるた画像を作るためのソフト�
   %dt 百人一首の画像の一括作成
   %dd 文字のフォントや色などを指定してやれば100首分の取り札画像を自動生成します．
   %dt 札落とし機能
-  %dd 作成した札画像で「札落とし（流しとも言う）」ができます．
+  %dd 作成した札画像で「札落とし（別名: 流し）」ができます．
   %dt 札の種類
-  %dd 取り札だけでなく読み札や決まり字かるたを作ることができます．
+  %dd 取り札だけでなく読み札や決まり字かるたなどを作ることができます．
   %dt 百人一首以外の札
   %dd いろはがるたや上毛かるた，俳句や長歌などの札画像も作れます．
   %dt 印刷機能
-  %dd 一枚が競技かるた用の札サイズ(53mm x 74mm)になるように印刷できます．この機能を使えばPDF出力することもできます．
+  %dd 一枚が競技かるた用の札サイズ(幅53mm，高さ74mm)になるように印刷できます．この機能を使えばPDFに出力することもできます．
 %h3.section ダウンロード
 %div
   配布形式: フリーウェア
@@ -32,46 +32,50 @@ description: 「かぜそみそ」はかるた画像を作るためのソフト�
   %a(href='http://www.vector.co.jp/download/file/winnt/art/fh412664.html') [Vectorからダウンロード]
 %hr.short-bar
 %div
-  %strong ※注意1:
-  かぜそみそを使用して作成した画像は個人，商用などに関わりなく自由に使用していただいて構いません．
+  %em ※補足1:
+  かぜそみそを使用して作成した画像は個人，商用などに関わりなく自由に利用していただいて構いません．
   ただし，使用するフォントによってはそのフォントを使用した画像の用途に制限がある可能性があるので注意して下さい．
 %div
-  %strong ※注意2:
+  %em ※補足2:
   Windows XPより前のOSをお使いの方は，
   %a(href="gdiplus.zip") [gdiplus.zip]
-  を解凍したgdiplus.dllを，かぜそみそと同じフォルダに置けばより高画質な画像を作れます．
+  を解凍したgdiplus.dllを，かぜそみそと同じフォルダに置けばより高品質な画像を作れます．
 %h3.section サンプル画像
 %div
   以下はかぜそみそを使って作られたかるた画像です．
 %div
   %a(href='example/fuda001.gif')
-    %img(src='example/fuda001_small.gif' width=159 height=222)
+    %img.fuda-example(src='example/fuda001_small.gif' width=159 height=222)
   %a(href='example/fuda002.gif')
-    %img(src='example/fuda002_small.gif' width=159 height=222)
+    %img.fuda-example(src='example/fuda002_small.gif' width=159 height=222)
   %a(href='example/fuda003.gif')
-    %img(src='example/fuda003_small.jpg' width=159 height=222)
+    %img.fuda-example(src='example/fuda003_small.jpg' width=159 height=222)
   %a(href='example/fuda004.gif')
-    %img(src='example/fuda004_small.jpg' width=159 height=222)
+    %img.fuda-example(src='example/fuda004_small.jpg' width=159 height=222)
   %a(href='example/fuda005.jpg')
-    %img(src='example/fuda005_small.jpg' width=159 height=222)
+    %img.fuda-example(src='example/fuda005_small.jpg' width=159 height=222)
   %a(href='example/fuda006.jpg')
-    %img(src='example/fuda006_small.jpg' width=159 height=222)
+    %img.fuda-example(src='example/fuda006_small.jpg' width=159 height=222)
   %a(href='example/fuda007.gif')
-    %img(src='example/fuda007_small.gif' width=159 height=222)
+    %img.fuda-example(src='example/fuda007_small.gif' width=159 height=222)
   %a(href='example/fuda008.gif')
-    %img(src='example/fuda008_small.gif' width=159 height=222)
+    %img.fuda-example(src='example/fuda008_small.gif' width=159 height=222)
   %a(href='example/fuda009.gif')
-    %img(src='example/fuda009_small.gif' width=159 height=222)
+    %img.fuda-example(src='example/fuda009_small.gif' width=159 height=222)
   %a(href='example/fuda010.gif')
-    %img(src='example/fuda010_small.gif' width=159 height=222)
+    %img.fuda-example(src='example/fuda010_small.gif' width=159 height=222)
   %a(href='example/fuda011.gif')
-    %img(src='example/fuda011_small.gif' width=159 height=222)
+    %img.fuda-example(src='example/fuda011_small.gif' width=159 height=222)
   %a(href='example/fuda012.gif')
-    %img(src='example/fuda012_small.gif' width=163 height=222)
+    %img.fuda-example(src='example/fuda012_small.gif' width=163 height=222)
 %h3.section PDF作成例
 %div
-  以下のPDFファイルをAdobe Acrobat Readerで印刷するときに「ページの拡大／縮小」を「なし」にすると，
-  一枚の札サイズが 幅 53 mm 高さ 74 mm になるはずです．
+  印刷対象を
+  %a(href='http://www.forest.impress.co.jp/library/software/cubepdf/') [CubePDF]
+  などのPDF出力に対応した仮想プリンタにすればPDFファイルに出力することができます．
+%div
+  以下はかぜそみそで作ったPDFファイルの例です．これをAdobe Acrobat Readerで印刷するときに「ページの拡大／縮小」を「なし」にすると，
+  競技かるた用の札サイズ(幅53mm，高さ74mm)になるはずです．
   %div
     PDF作成例その1:
     %a(href='torifuda.pdf') [取り札PDF (35KB)]
