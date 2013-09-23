@@ -1,6 +1,6 @@
 Description: GitHub User Pages for pjmtdw
 Howto:
-  initialize submodules and gems
+  initialize submodules and install gems
   $ make init
 
   start middleman server for development
@@ -14,6 +14,6 @@ Howto:
   $ git push origin master
 
 License:
-  This page uses Amicus as middleman template
-  see README.md.amicus for details. License of Amicus is described in LICENSE.md.amicus
-  The rest of this page is MIT License -- see LICENSE.md
+  This page uses Amicus as middleman template.
+  Read README.md.amicus for details. License of Amicus is described in LICENSE.md.amicus.
+  The rest of this page is MIT License -- see LICENSE.md.
