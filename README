@@ -1,0 +1,19 @@
+Description: GitHub User Pages for pjmtdw
+Howto:
+  initialize submodules and gems
+  $ make init
+
+  start middleman server for development
+  $ make server
+
+  build and deploy
+  $ make build
+  $ cd build
+  $ git add -A
+  $ git commit -m '<Commit Message>'
+  $ git push origin master
+
+License:
+  This page uses Amicus as middleman template
+  see README.md.amicus for details. License of Amicus is described in LICENSE.md.amicus
+  The rest of this page is MIT License -- see LICENSE.md
