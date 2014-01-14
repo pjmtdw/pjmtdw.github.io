@@ -1,4 +1,4 @@
-/* line 33, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 33, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 article,
 aside,
 details,
@@ -13,7 +13,7 @@ section,
 summary {
   display: block; }
 
-/* line 40, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 40, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 audio,
 canvas,
 video {
@@ -21,22 +21,24 @@ video {
   *display: inline;
   *zoom: 1; }
 
-/* line 48, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 48, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
-/* line 55, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 55, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 [hidden] {
   display: none; }
 
-/* line 69, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 77, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 html {
+  background: #fff;
+  color: #000;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
-/* line 82, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 92, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 html,
 button,
 input,
@@ -44,83 +46,83 @@ select,
 textarea {
   font-family: sans-serif; }
 
-/* line 88, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 98, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 body {
   margin: 0; }
 
-/* line 103, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 113, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 a:focus {
   outline: thin dotted; }
 
-/* line 109, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 119, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 a:active,
 a:hover {
   outline: 0; }
 
-/* line 122, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 132, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
-/* line 127, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 137, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0; }
 
-/* line 132, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 142, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0; }
 
-/* line 137, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 147, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0; }
 
-/* line 142, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 152, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0; }
 
-/* line 147, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 157, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0; }
 
-/* line 153, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 163, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
-/* line 159, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 169, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 b,
 strong {
   font-weight: bold; }
 
-/* line 163, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 173, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 blockquote {
   margin: 1em 40px; }
 
-/* line 168, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 178, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 dfn {
   font-style: italic; }
 
-/* line 174, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 184, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
-/* line 181, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 191, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
 
-/* line 188, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 198, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 p,
 pre {
   margin: 1em 0; }
 
-/* line 196, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 206, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 code,
 kbd,
 pre,
@@ -129,27 +131,27 @@ samp {
   _font-family: 'courier new', monospace;
   font-size: 1em; }
 
-/* line 203, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 213, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word; }
 
-/* line 210, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 220, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 q {
   quotes: none; }
 
-/* line 216, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 226, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 q:before,
 q:after {
   content: '';
   content: none; }
 
-/* line 222, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 232, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 small {
   font-size: 80%; }
 
-/* line 228, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 238, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -157,68 +159,68 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 235, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 245, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 239, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 249, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
-/* line 253, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 263, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 dl,
 menu,
 ol,
 ul {
   margin: 1em 0; }
 
-/* line 257, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 267, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 dd {
   margin: 0 0 0 40px; }
 
-/* line 264, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 274, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 menu,
 ol,
 ul {
   padding: 0 0 0 40px; }
 
-/* line 270, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 280, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
   list-style-image: none; }
 
-/* line 283, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 293, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic; }
 
-/* line 289, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 299, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
-/* line 300, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 310, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 figure {
   margin: 0; }
 
-/* line 311, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 321, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 form {
   margin: 0; }
 
-/* line 316, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 326, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
-/* line 325, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 335, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 legend {
   border: 0;
   padding: 0;
   white-space: normal;
   *margin-left: -7px; }
 
-/* line 339, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 349, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 button,
 input,
 select,
@@ -228,17 +230,17 @@ textarea {
   vertical-align: baseline;
   *vertical-align: middle; }
 
-/* line 349, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 359, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 button,
 input {
   line-height: normal; }
 
-/* line 358, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 368, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 button,
 select {
   text-transform: none; }
 
-/* line 372, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 382, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -247,12 +249,12 @@ input[type="submit"] {
   cursor: pointer;
   *overflow: visible; }
 
-/* line 380, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 390, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
 
-/* line 389, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 399, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -260,35 +262,35 @@ input[type="radio"] {
   *height: 13px;
   *width: 13px; }
 
-/* line 399, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 409, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
 
-/* line 409, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 419, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* line 415, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 425, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-/* line 422, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 432, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 textarea {
   overflow: auto;
   vertical-align: top; }
 
-/* line 434, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_normalize.scss */
+/* line 444, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 22, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 22, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 html,
 button,
 input,
@@ -296,22 +298,22 @@ select,
 textarea {
   color: #222222; }
 
-/* line 26, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 26, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 body {
   font-size: 1em;
   line-height: 1.4; }
 
-/* line 34, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 34, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
 
-/* line 39, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 39, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 ::selection {
   background: #b3d4fc;
   text-shadow: none; }
 
-/* line 45, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 45, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 hr {
   display: block;
   height: 1px;
@@ -320,21 +322,21 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
-/* line 55, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 55, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 img {
   vertical-align: middle; }
 
-/* line 60, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 60, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
 
-/* line 67, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 67, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 textarea {
   resize: vertical; }
 
-/* line 77, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_main.scss */
+/* line 77, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_main.scss */
 .chromeframe {
   margin: 0.2em 0;
   background: #ccc;
@@ -552,62 +554,62 @@ img.fuda-example:hover {
   filter: contrast(120%) brightness(80%); }
 
 @media print {
-  /* line 11, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 11, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   * {
     background: transparent !important;
     color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 19, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 19, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   a,
   a:visited {
     text-decoration: underline; }
 
-  /* line 23, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 23, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   a[href]:after {
     content: " (" attr(href) ")"; }
 
-  /* line 27, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 27, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
-  /* line 37, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 37, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
 
-  /* line 42, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 42, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
-  /* line 47, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 47, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   thead {
     display: table-header-group; }
 
-  /* line 52, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 52, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   tr,
   img {
     page-break-inside: avoid; }
 
-  /* line 56, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 56, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   img {
     max-width: 100% !important; }
 
   @page {
     margin: 0.5cm; }
 
-  /* line 66, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 66, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 72, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.1/stylesheets/h5bp/_media.scss */
+  /* line 72, /home/maho/pjmtdw.github.io/.vendor/ruby/1.9.1/gems/compass-h5bp-0.1.2/stylesheets/h5bp/_media.scss */
   h2,
   h3 {
     page-break-after: avoid; } }
