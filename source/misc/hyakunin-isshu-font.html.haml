@@ -42,7 +42,7 @@ title: スマホアプリで札を描くための百人一首用フォントの�
   %div
     $ pdftk input.pdf burst output output_%02d.pdf compress
   %div
-    $ for i in output_*.pdf; do inkscape --without-gui --file=$i --export-plain-svg=output-svg; done
+    $ for i in output_*.pdf; do inkscape --without-gui --file=$i --export-plain-svg=${i%.pdf}.svg; done
 %h3.section 採用案
 %p
   %div
@@ -52,7 +52,7 @@ title: スマホアプリで札を描くための百人一首用フォントの�
   %div
     ただし，日本語TTFフォントは容量が大きく，大体3MBから10MBぐらいです．ZIPでの圧縮率も7割程度なのでちょっと大き過ぎます．
   %div
-    という訳なのでフォントの中から百人一首に使われていない不要な文字を取り除くという作業を行ないます．
+    という訳なので容量削減のためにフォントの中から百人一首に使われていない不要な文字を取り除くという作業を行ないます．
   %div
     <a href="http://fontforge.org">[FontForge]</a> にはPythonライブラリが同梱されていて，それを使えばPythonスクリプトでTTF形式などのフォントファイルを編集することが可能です．
 %h4 FontForgeのインストール

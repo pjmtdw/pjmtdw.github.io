@@ -4,3 +4,7 @@ bin/
 .vendor/
 .rbenv-version
 Gemfile.lock
+source/javascripts/libs/jquery.min.js
+source/javascripts/libs/jquery.simplemodal.js
+source/javascripts/libs/modernizr.js
+bower_components/

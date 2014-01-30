@@ -47,7 +47,7 @@ description: 「かぜそみそ」はかるた画像を作るためのソフト�
 %h3.section サンプル画像
 %div
   以下はかぜそみそを使って作られたかるた画像です．
-%div
+%div(id='fuda-examples')
   %a(href='example/fuda001.gif')
     %img.fuda-example(src='example/fuda001_small.gif' width=159 height=222)
   %a(href='example/fuda002.gif')
@@ -86,3 +86,6 @@ description: 「かぜそみそ」はかるた画像を作るためのソフト�
   %div
     PDF作成例その2:
     %a(href="yomifuda.pdf") [読み札PDF (176KB)]
+
+= javascript_include_tag "libs/jquery.min","libs/jquery.simplemodal","kazesomiso"
+= stylesheet_link_tag "simplemodal"
