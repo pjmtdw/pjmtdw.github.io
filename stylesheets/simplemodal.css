@@ -1,0 +1,23 @@
+/* line 1, /home/maho/pjmtdw.github.io/source/stylesheets/simplemodal.css.scss */
+#basic-modal-content {
+  display: none; }
+
+/* Overlay */
+/* line 3, /home/maho/pjmtdw.github.io/source/stylesheets/simplemodal.css.scss */
+#simplemodal-overlay {
+  background-color: #000; }
+
+/* Container */
+/* line 6, /home/maho/pjmtdw.github.io/source/stylesheets/simplemodal.css.scss */
+#simplemodal-container legend {
+  background: none; }
+/* line 9, /home/maho/pjmtdw.github.io/source/stylesheets/simplemodal.css.scss */
+#simplemodal-container #tag-popup {
+  position: relative;
+  height: auto;
+  width: 320px;
+  color: black;
+  background-color: #FED;
+  border: 4px solid #666;
+  padding: 12px;
+  margin: 10px auto; }
