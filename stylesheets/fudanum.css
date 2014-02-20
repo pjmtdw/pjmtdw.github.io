@@ -1,0 +1,22 @@
+/* line 1, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+table tr:nth-child(odd) {
+  background-color: #EEEEFF; }
+
+/* line 6, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+.fudanum {
+  text-align: right;
+  padding-right: 1em;
+  color: brown; }
+
+/* line 11, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+.simonoku {
+  padding-left: 1.5em; }
+
+/* line 15, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+.author {
+  color: #330000;
+  text-align: center; }
+
+/* line 19, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+td {
+  white-space: nowrap; }
