@@ -69,14 +69,14 @@
         </p>
         <h3 class='section'>Android版</h3>
         <p>
-          <div>配布形式: 無料アプリ, オープンソース</div>
+          <div>配布形式: 無料アプリ, オープンソース <a href='http://github.com/pjmtdw/wasuramoti-android'>[GitHub]</a></div>
           <div>対応OS: Android 2.1以降</div>
-          <div>最新バージョン: 0.8.7</div>
+          <div>最新バージョン: 0.8.8</div>
           <div>インストール方法: 下記のいずれかの方法でインストールできます．</div>
           <ul>
             <li>
               最も一般的な方法 &rArr;
-              <a href='https://play.google.com/store/apps/details?id=karuta.hpnpwd.wasuramoti&amp;hl=ja'>[Google Playでインストール]</a>
+              <a href='http://play.google.com/store/apps/details?id=karuta.hpnpwd.wasuramoti'>[Google Playでインストール]</a>
             </li>
             <li>
               Kindle Fireを使っている人 &rArr;
@@ -106,48 +106,16 @@
           <a href='howto-record.html'>[わすらもち用読み音声データの作成]</a>
           をご覧下さい．
         </div>
-        <h3 class='section'>競技かるた用百人一首読み上げソフトを作る際のTIPS</h3>
-        <p>
-          <div>
-            以下は競技かるた用の読み上げソフトを作りたい人は参考にしてみて下さい．わすらもちのAndroid版のソースはBSDライセンスでGitHubにて公開しています．
-          </div>
-          <div>
-            <a href='https://github.com/pjmtdw/wasuramoti-android'>[わすらもちAndroid版のソース]</a>
-          </div>
-        </p>
-        <p>
-          <div>
-            音声ファイルを再生するAPIやライブラリは大抵のOSに用意されています．それらを使って「ただ音声を一定の間隔で流せばいいだけだから簡単」のように思えますが，問題はそう単純ではありません．
-          </div>
-          <div>
-            実際に音声を「下の句&rArr;1秒停止&rArr;上の句」のように再生してみると，再生の区切り目に一瞬だけ微かな雑音が混じります．普通の音楽再生などでは気にも留めない程度の雑音ですが競技かるたにとっては致命的です．
-          </div>
-          <div>
-            この現象はWindowsでもAndroidでも起き，機種によっては出ないこともありますが，個体差が大きいWindowsやAndroidにおいて雑音が出ないことを期待するのは非常に危険です．
-          </div>
-        </p>
-        <p>
-          <div>
-            それを解決するためにわすらもちでは「上の句と下の句の音声ファイルをそれぞれ事前にデコードして連結した上で再生」ということを行っています．
-          </div>
-          <div>
-            これは再生時のデコードの負荷を減らし，しかもAndroidだとDalvikVMのGCが走るのを抑制できるので音飛びを防止する効果もあります．
-          </div>
-          <div>
-            その際に先頭や末尾に微量のフェードを行い，無音だと検知した部分(設定画面の「閾値」以下)を取り除いた上で間が1秒になるようにしています．フェードを行なう理由は先ほどの雑音を軽減するためです(昔のWindowsだとそれで雑音が消えるものもあった)．
-          </div>
-          <div>
-            この作業は最新の端末では一瞬で終わりますが，古い端末だと数秒程度かかることもあるので，前の札を読み終えた直後に行うことで練習での実質待ち時間をほぼゼロにしています．
-          </div>
-        </p>
-        <p>
-          <div>
-            AndroidにはOgg Vorbisを再生するAPIはあるのですがデコードだけを行うAPIはないのでAndroid NDKでコンパイルしたlibogg/libvorbisをJNI経由で呼んでいます．
-          </div>
-          <div>
-            またAndroidは端末によっては使用できるメモリにかなり制限があるのでメモリ使用量を抑える工夫が必要です．その辺はわすらもちのソースを読むと分かります．
-          </div>
-        </p>
+        <h3 class='section'>札セットの取り込み</h3>
+        <div>
+          Android版わすらもちには札セットをリンクから追加する機能が付いています(ver 0.8.8以降の機能)．
+        </div>
+        <div>
+          下記のサイトで五色百人一首，きまり字五色二十人一首，三分の百首の札セットを取り込めます．
+        </div>
+        <div>
+          <a href='fudaset.html'>[札セットの配布場所]</a>
+        </div>
       </div>
       <footer>
         <p>
