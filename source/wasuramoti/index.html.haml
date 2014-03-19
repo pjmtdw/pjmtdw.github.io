@@ -39,14 +39,14 @@ description: 「わすらもち」は競技かるたの練習にも使える百�
 
 %h3.section Android版
 %p
-  %div 配布形式: 無料アプリ, オープンソース
+  %div 配布形式: 無料アプリ, オープンソース <a href='http://github.com/pjmtdw/wasuramoti-android'>[GitHub]</a>
   %div 対応OS: Android 2.1以降
-  %div 最新バージョン: 0.8.7
+  %div 最新バージョン: 0.8.8
   %div インストール方法: 下記のいずれかの方法でインストールできます．
   %ul
     %li
       最も一般的な方法 &rArr;
-      %a(href='https://play.google.com/store/apps/details?id=karuta.hpnpwd.wasuramoti&hl=ja') [Google Playでインストール]
+      %a(href='http://play.google.com/store/apps/details?id=karuta.hpnpwd.wasuramoti') [Google Playでインストール]
     %li
       Kindle Fireを使っている人 &rArr;
       %a(href='http://www.amazon.co.jp/dp/B00I11N2ZU') [Amazonアプリストアでインストール]
@@ -68,30 +68,11 @@ description: 「わすらもち」は競技かるたの練習にも使える百�
   詳しくは
   %a(href='howto-record.html') [わすらもち用読み音声データの作成]
   をご覧下さい．
-%h3.section 競技かるた用百人一首読み上げソフトを作る際のTIPS
-%p
-  %div
-    以下は競技かるた用の読み上げソフトを作りたい人は参考にしてみて下さい．わすらもちのAndroid版のソースはBSDライセンスでGitHubにて公開しています．
-  %div
-    %a(href='https://github.com/pjmtdw/wasuramoti-android') [わすらもちAndroid版のソース]
-%p
-  %div
-    音声ファイルを再生するAPIやライブラリは大抵のOSに用意されています．それらを使って「ただ音声を一定の間隔で流せばいいだけだから簡単」のように思えますが，問題はそう単純ではありません．
-  %div
-    実際に音声を「下の句&rArr;1秒停止&rArr;上の句」のように再生してみると，再生の区切り目に一瞬だけ微かな雑音が混じります．普通の音楽再生などでは気にも留めない程度の雑音ですが競技かるたにとっては致命的です．
-  %div
-    この現象はWindowsでもAndroidでも起き，機種によっては出ないこともありますが，個体差が大きいWindowsやAndroidにおいて雑音が出ないことを期待するのは非常に危険です．
-%p
-  %div
-    それを解決するためにわすらもちでは「上の句と下の句の音声ファイルをそれぞれ事前にデコードして連結した上で再生」ということを行っています．
-  %div
-    これは再生時のデコードの負荷を減らし，しかもAndroidだとDalvikVMのGCが走るのを抑制できるので音飛びを防止する効果もあります．
-  %div
-    その際に先頭や末尾に微量のフェードを行い，無音だと検知した部分(設定画面の「閾値」以下)を取り除いた上で間が1秒になるようにしています．フェードを行なう理由は先ほどの雑音を軽減するためです(昔のWindowsだとそれで雑音が消えるものもあった)．
-  %div
-    この作業は最新の端末では一瞬で終わりますが，古い端末だと数秒程度かかることもあるので，前の札を読み終えた直後に行うことで練習での実質待ち時間をほぼゼロにしています．
-%p
-  %div
-    AndroidにはOgg Vorbisを再生するAPIはあるのですがデコードだけを行うAPIはないのでAndroid NDKでコンパイルしたlibogg/libvorbisをJNI経由で呼んでいます．
-  %div
-    またAndroidは端末によっては使用できるメモリにかなり制限があるのでメモリ使用量を抑える工夫が必要です．その辺はわすらもちのソースを読むと分かります．
+
+%h3.section 札セットの取り込み
+%div
+  Android版わすらもちには札セットをリンクから追加する機能が付いています(ver 0.8.8以降の機能)．
+%div
+  下記のサイトで五色百人一首，きまり字五色二十人一首，三分の百首の札セットを取り込めます．
+%div
+  %a(href='fudaset.html') [札セットの配布場所]

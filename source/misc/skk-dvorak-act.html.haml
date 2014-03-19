@@ -63,31 +63,3 @@ title: WindowsのSKKでACT(Dvorak版AZIK)
 %p
   <a href="https://code.google.com/p/corvus-skk/downloads/list">配布されているCorvusSKK</a>を展開すると中に <kbd>config-sample.7z</kbd> というファイルがあり，その中に <kbd>config - act.xml</kbd> があるので，それをCorvusSKKの <kbd>config.xml</kbd> に上書きします．
   Windows7なら <kbd>C:\Users\ユーザ\AppData\Roaming\CorvusSKK\config.xml</kbd> です．
-%p
-  %div
-    ただしCorvusSKK version 0.9.8現在「勝った」「言った」など「っ」が送り仮名のものはうまく変換できないという不具合（？）があります．
-  %div
-    そこで苦肉の策としてSKKの辞書であるSKK-JISYO.Lの方に手を加えてやります．具体的には，「かt /勝/買/飼/刈/」となっている行に「かっ /勝っ/買っ/飼っ/刈っ/」を追加してやります．
-%p
-  手動でこれを行うのは面倒だと思うのでRuby1.9用の簡単なスクリプトを書いてみました．
-  %code
-    $ ./skk-jisyo-filter.rb &lt; SKK-JISYO.L &gt; SKK-JISYO.L.new 
-  のように変換してこの SKK-JISYO.L.new をCorvusSKKに読み込ませれば完了です．
-  %pre
-    &nbsp;
-    :plain
-      #!/usr/bin/ruby19
-      #-*- coding:utf-8 -*-
-      $stdin.set_encoding("EUC-JP","UTF-8")
-      $stdout.set_encoding("EUC-JP")
-      $&lt;.each{|line|
-        line.chomp!
-        if /^(\p{Hiragana}+)t / =~ line then
-          print $1 + "っ "
-          puts "/" + $'.sub(/^\//,"").sub(/\/$/,"").split("/").map{|words|
-            (w,comment) = words.split(";")
-            w + "っ" + if comment then ";"+comment else "" end
-          }.join("/") + "/"
-        end
-        puts line
-      }
