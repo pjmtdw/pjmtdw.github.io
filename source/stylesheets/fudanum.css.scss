@@ -1,21 +1,35 @@
-table tr:nth-child(odd){
-  background-color: #EEEEFF;
-}
-table tr:nth-child(even){
-}
-.fudanum{
-  text-align: right;
-  padding-right: 1em;
-  color: brown;
-}
-.simonoku{
-  padding-left: 1.5em;
-}
+#list100{
+  tr:nth-child(odd){
+    background-color: #EEEEFF;
+  }
+  tr:nth-child(even){
+    background-color: white;
+  }
+  .fudanum{
+    text-align: right;
+    padding-right: 1em;
+    color: brown;
+  }
+  .fudanum-small{
+    color: maroon;
+    font-size: 0.8em;
+  }
+  .simonoku{
+    padding-left: 1.5em;
+    color: black;
+  }
+  .kaminoku{
+    color: black;
+  }
 
-.author{
-  color: #330000;
-  text-align: center;
-}
-td{
-  white-space: nowrap;
+  .author *{
+    color: #330000;
+    text-align: center;
+  }
+  td{
+    white-space: nowrap;
+    a{
+      text-decoration: none;
+    }
+  }
 }
