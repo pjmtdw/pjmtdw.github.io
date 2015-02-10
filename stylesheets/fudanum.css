@@ -1,22 +1,32 @@
-/* line 1, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
-table tr:nth-child(odd) {
+/* line 2, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+#list100 tr:nth-child(odd) {
   background-color: #EEEEFF; }
-
-/* line 6, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
-.fudanum {
+/* line 5, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+#list100 tr:nth-child(even) {
+  background-color: white; }
+/* line 8, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+#list100 .fudanum {
   text-align: right;
   padding-right: 1em;
   color: brown; }
-
-/* line 11, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
-.simonoku {
-  padding-left: 1.5em; }
-
-/* line 15, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
-.author {
+/* line 13, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+#list100 .fudanum-small {
+  color: maroon;
+  font-size: 0.8em; }
+/* line 17, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+#list100 .simonoku {
+  padding-left: 1.5em;
+  color: black; }
+/* line 21, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+#list100 .kaminoku {
+  color: black; }
+/* line 25, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+#list100 .author * {
   color: #330000;
   text-align: center; }
-
-/* line 19, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
-td {
+/* line 29, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+#list100 td {
   white-space: nowrap; }
+  /* line 31, /home/maho/pjmtdw.github.io/source/stylesheets/fudanum.css.scss */
+  #list100 td a {
+    text-decoration: none; }
