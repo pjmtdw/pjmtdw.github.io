@@ -13,8 +13,6 @@ $(->
       fn.remove()
       xx.remove()
     )
-  else
-
   $('#list100 tr').each((i,x)->
     [author_href,poem_href] = if i == 0
       [WIKIPEDIA+WIKIPEDIA_AUTHOR[i],WIKIPEDIA+"%E9%9B%A3%E6%B3%A2%E6%B4%A5_%28%E5%92%8C%E6%AD%8C%29"]

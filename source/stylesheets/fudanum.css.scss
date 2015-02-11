@@ -8,23 +8,26 @@
   .fudanum{
     text-align: right;
     padding-right: 1em;
-    color: brown;
+    color: maroon;
   }
   .fudanum-small{
     color: maroon;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   .simonoku{
     padding-left: 1.5em;
+    margin: .3em;
     color: black;
   }
   .kaminoku{
     color: black;
+    margin: .3em;
   }
 
-  .author *{
+  .author > a > div{
     color: #330000;
     text-align: center;
+    margin: .3em;
   }
   td{
     white-space: nowrap;
