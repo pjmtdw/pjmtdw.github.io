@@ -22,8 +22,6 @@
         fn.remove();
         return xx.remove();
       });
-    } else {
-
     }
     return $('#list100 tr').each(function(i, x) {
       var author_href, poem_href, _ref;
