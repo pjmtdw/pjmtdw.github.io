@@ -31,47 +31,53 @@
         </div>
         <h3 class='section'>概要</h3>
         <div>
-          このページではわすらもち用の自作の読み音声データの作成方法について説明します．Android版とWindows版で同じ読み音声データが使えます．
+          このページではわすらもち用の自作の読み音声データの作成方法について説明します．Windowsパソコンで作業することを前提に書いています．
         </div>
-        <div>百人一首の読み上げ音声を入手する手段は主に下記の二つでしょう．</div>
+        <div></div>
+        <ol>
+          <li>
+            <a href='#section1'>音声データの入手</a>
+          </li>
+          <li>
+            <a href='#section2'>使える音声データ形式とファイル名</a>
+          </li>
+          <li>
+            <a href='#section3'>音声ファイルの置き場所</a>
+          </li>
+          <li>
+            <a href='#section4'>マイクによる録音</a>
+          </li>
+          <li>
+            <a href='#section5'>ノイズ除去</a>
+          </li>
+          <li>
+            <a href='#section6'>無音での分割</a>
+          </li>
+          <li>
+            <a href='#section7'>Ogg Vorbisに変換</a>
+          </li>
+          <li>
+            <a href='#section8'>出来上がりのテスト</a>
+          </li>
+        </ol>
+        <div>CDからリッピングしたりMP3などのデータから変換する場合は2,3,7の手順だけで大丈夫です．作った音声データはAndroid版とWindows版で同じものが使えます．</div>
+        <a name='section1'></a>
+        <h3 class='section'>1. 音声データの入手</h3>
+        <div>百人一首の読み上げ音声を入手する手段は主に下記の三つでしょう．</div>
         <ul>
           <li>マイクを使って読みが上手い人の読み上げを録音する</li>
           <li>市販の読み上げCDからリッピングする</li>
+          <li>MP3形式などでweb公開されている音声データをダウンロードしてくる.</li>
         </ul>
         <div>
-          前者は知り合いの公認もしくは専任読手に頼んでみましょう．後者に関しては現在は競技かるたに使えるCDはなかなか売っていませんが，頑張って見つけて下さい．
+          現在では競技かるたに使えるCDはなかなか売っていませんが，頑張って見つけて下さい．私が最近購入したものの中では [<a href='http://www.amazon.co.jp/dp/4578245047'>原色 小倉百人一首 朗詠cd付 (シグマベスト)</a>] に付いてるCDは芹野惠子専任読手の読み上げで，わすらもち用の読み音声として使えます．
         </div>
+        <div></div>
         <div>
-          私が最近購入したものの中では [<a href='http://www.amazon.co.jp/dp/4578245047'>原色 小倉百人一首 朗詠CD付 (シグマベスト)</a>] に付いてるCDは芹野惠子専任読手の読み上げで，わすらもち用の読み音声として使えます．
+          web公開されている百人一首の音声データについては [<a href='http://100nin.com/rouei.html'>百人一首を覚えたい</a>]から辿れるリンクにいくつかあるみたいです．
         </div>
-        <div>
-          という訳で無事録音する準備もしくはCDを入手できたら，以下の手順でわすらもちの読手に追加します．CDからリッピングしたりMP3データから変換する場合は1,2,6の手順だけで大丈夫です．
-        </div>
-        <ol>
-          <li>
-            <a href='#section1'>音声データ形式とファイル名</a>
-          </li>
-          <li>
-            <a href='#section2'>音声ファイルの置き場所</a>
-          </li>
-          <li>
-            <a href='#section3'>マイクによる録音</a>
-          </li>
-          <li>
-            <a href='#section4'>ノイズ除去</a>
-          </li>
-          <li>
-            <a href='#section5'>無音での分割</a>
-          </li>
-          <li>
-            <a href='#section6'>Ogg Vorbisに変換</a>
-          </li>
-          <li>
-            <a href='#section7'>出来上がりのテスト</a>
-          </li>
-        </ol>
-        <a name='section1'></a>
-        <h3 class='section'>1. 音声データ形式とファイル名</h3>
+        <a name='section2'></a>
+        <h3 class='section'>2. 使える音声データ形式とファイル名</h3>
         <p>
           <div>
             わすらもちが対応している音声データは「Ogg Vorbis形式」です．一応ステレオにも対応しているはずですがファイルの容量などの関係上モノラルを推奨します．各ファイルの名前は以下のようになっている必要があります．
@@ -94,8 +100,8 @@
             <em>※補足3:</em> <a href="http://www.vector.co.jp/soft/winnt/util/se131133.html"> [Flexible Renamer] </a> などファイル名を一括変換するソフトを利用すると楽かもしれません．
           </div>
         </p>
-        <a name='section2'></a>
-        <h3 class='section'>2. 音声ファイルの置き場所</h3>
+        <a name='section3'></a>
+        <h3 class='section'>3. 音声ファイルの置き場所</h3>
         <em>Windows版の場合</em>
         <div class='subsection'>
           わすらもちと同じフォルダに
@@ -118,8 +124,8 @@
             <em>※補足3:</em> サブフォルダは深さ3までしか探索していないので，あまり深い階層にwasuramoti_readerフォルダを置かないで下さい．どのフォルダを探索するかは設定で変えられます．
           </div>
         </div>
-        <a name='section3'></a>
-        <h3 class='section'>3. マイクによる録音</h3>
+        <a name='section4'></a>
+        <h3 class='section'>4. マイクによる録音</h3>
         まずは録音です．適当なマイクと音声編集ソフトを用意します．
         今回はフリーの <a href="http://audacity.sourceforge.net/">[Audacity]</a> というソフトを使います．
         <div class='figure'>
@@ -135,8 +141,8 @@
         <div>
           <em>※補足:</em> 上の句と下の句の間および，下の句と上の句の間には5秒以上の間を空けて下さい．
         </div>
-        <a name='section4'></a>
-        <h3 class='section'>4. ノイズ除去</h3>
+        <a name='section5'></a>
+        <h3 class='section'>5. ノイズ除去</h3>
         <div>
           よほど良い録音環境でない限り，出来上がったWAV音声ファイルには雑音が入っていると思います．
         </div>
@@ -176,8 +182,8 @@
           <img height='196' src='img/howto-record-006.jpg' width='430'>
           <div class='label'>図6: 雑音除去完了</div>
         </div>
-        <a name='section5'></a>
-        <h3 class='section'>5. 無音での分割</h3>
+        <a name='section6'></a>
+        <h3 class='section'>6. 無音での分割</h3>
         <div>でき上がったものは一つの巨大な音声ファイルなので，これを各首ごとに分割する必要があります．</div>
         <div>Audacityには無音を検知して分割してくれる機能があるのでそれを使います．</div>
         <div><em>※注意</em>: 最近のAudacityには「Sound Finder」という機能があるのでそっちを使った方がいいかもしれません．使い方は似たような感じです．</div>
@@ -228,10 +234,10 @@
           <div class='label'>図10: 音声ファイルの出力</div>
         </div>
         <div>
-          出力したファイルはOgg Vorbis形式なので，次の章「6. Ogg Vorbisに変換」は飛ばして下さい．
+          出力したファイルはOgg Vorbis形式なので，次の章「7. Ogg Vorbisに変換」は飛ばして下さい．
         </div>
-        <a name='section6'></a>
-        <h3 class='section'>6. Ogg Vorbisに変換</h3>
+        <a name='section7'></a>
+        <h3 class='section'>7. Ogg Vorbisに変換</h3>
         音声ファイルがOgg Vorbis形式でない場合はOgg Vorbisに変換する必要があります．
         今回はfoobar2000というフリーウェアを使います．
         <ol>
@@ -242,8 +248,8 @@
           <li>[Ogg Vorbis, 160kbps, q5.0]を選択してOKを押します．</li>
           <li>「oggenc.exeの場所はどこ？」と聞かれるので，oggenc.exeを置いたフォルダを指定します．</li>
         </ol>
-        <a name='section7'>
-          <h3 class='section'>7. 出来上がりのテスト</h3>
+        <a name='section8'>
+          <h3 class='section'>8. 出来上がりのテスト</h3>
           <div>Windows版わすらもちには出来たoggファイルをチェックする機能が付いています．</div>
           <div>[読手(<u>Y</u>)]&rArr;[チェック(<u>C</u>)]で各音声ファイルのデータをチェックできます．</div>
           <div>この時に表示されるHEAD,TAILというのは，</div>
