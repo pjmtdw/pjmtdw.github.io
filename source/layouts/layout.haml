@@ -3,7 +3,7 @@
 /[if IE 7]    <html class="no-js lt-ie9 lt-ie8">
 /[if IE 8]    <html class="no-js lt-ie9">
 <!--[if gt IE 8]><!-->
-%html{:class => "no-js"}
+%html{:lang => I18n.t(:lang), :class => "no-js"}
   <!--<![endif]-->
   %head
     %meta{:charset => "utf-8"}
@@ -11,16 +11,16 @@
 
     %title= current_page.data.title
 
-    %meta{:name => "description", :content => "#{current_page.data.description}"}
-    %meta{:name => "author", :content => "宇野算譜工房"}
+    - if not current_page.data.description.to_s.empty?
+      %meta{:name => "description", :content => current_page.data.description}
+    %meta{:name => "author", :content => I18n.t(:author) }
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
     = stylesheet_link_tag "screen"
 
   %body{:class => current_page.data.bodyclass}
     /[if lt IE 7]
-      %p.chromeframe
-        お使いのブラウザはちょっと古いので，<a href="http://browsehappy.com/">バージョンアップ</a>することをお勧めします．
+      %p.chromeframe= I18n.t(:browsehappy)
     .container
       %header
         %h1= current_page.data.title
@@ -31,7 +31,7 @@
       %footer
         %p
           &copy; #{copyright_years(2013)} 
-          %a(href='/misc/author.html') 宇野算譜工房
+          %a(href='/misc/author.html')= I18n.t(:author)
 
     -# Holder.js - canvas-generated placeholder images for prototyping
     -# = javascript_include_tag "libs/holder"
