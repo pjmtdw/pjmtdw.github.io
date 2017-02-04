@@ -30,12 +30,15 @@
         <h3 class='section'>概要</h3>
         <div>
           Android版わすらもちには内部ストレージやSDカードなどの外部ストレージから読み手の音声ファイルをスキャンする機能が付いています．
-          仮に内部ストレージを<tt>/storage</tt>，SDカードを<tt>/sdcard</tt>と認識した場合，そこを起点として深さ3まで探索して<tt>wasuramoti_reader</tt>というフォルダを探します．
+          仮に内部ストレージを<tt>/storage</tt>，SDカードを<tt>/sdcard</tt>と認識した場合，「スキャン開始」を押すとそれら起点として深さ3まで探索して<tt>wasuramoti_reader</tt>というフォルダを探します．そしてその配下にある全てのフォルダを読手として登録します．
           例えば，
-          <code>/sdcard/download/wasuramoti_reader/上杉謙信
-          /sdcard/document/wasuramoti_reader/松尾芭蕉
-          /storage/music/wasuramoti_reader/宮沢賢治</code>
-          みたいな場合は上杉謙信，松尾芭蕉，宮沢賢治を読手として登録します．
+          <code>/sdcard/download/wasuramoti_reader/上杉謙信/
+          /sdcard/document/wasuramoti_reader/松尾芭蕉/
+          /storage/music/wasuramoti_reader/宮沢賢治/</code>
+          みたいな場合は上杉謙信，松尾芭蕉，宮沢賢治を読手として一覧に登録します．
+        </div>
+        <div>
+          そして実際にユーザが読手を一覧から選択した際にそのフォルダの中に <tt>上杉謙信_000_1.ogg</tt> 〜 <tt>上杉謙信_100_2.ogg</tt> があるかどうかを調べてあったら読手として使えます．
         </div>
         <h3 class='section'>スキャンしても表示されない場合</h3>
         <div>
@@ -45,7 +48,7 @@
         <h3 class='section'>1. ファイルマネージャーをインストールして起動</h3>
         <div>
           絶対パスを表示してくれるものなら何でもいいのですが，今回は「<a href='https://play.google.com/store/apps/details?id=com.ghostsq.commander'>Ghost Commander File Manager</a>」というのを使うのでまずはインストールして起動します．
-          ちょっと癖があって，ファイルやフォルダの行の左半分をタップするとファイルをアプリで開いたりフォルダに移動したりできて，右半分をタップするとファイルやフォルダを複数選択することができます．
+          このアプリはちょっと癖があって，ファイルやフォルダの行の左半分をタップするとそれを開き，右半分をタップすると複数選択することができます．
         </div>
         <div class='figure'>
           <a href='./img/howto-scan/ghost_commander_001.jpg'><img src="./img/howto-scan/ghost_commander_001_small.jpg" ></a>
