@@ -6,25 +6,23 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link href="/stylesheets/screen.css" media="screen" rel="stylesheet" type="text/css" />
     <style>
-     .responsive-iframe-container {
-          position: relative;
-          width: 100%;
-          padding-bottom: 177.78%; /* 9:16 */
-          height: 0;
-          overflow: hidden;
+      .iframe-wrap {
+        position: relative;
+        width: 100%;
+        padding: calc(1600 / 600 * 100%) 0 0; /* height / width */
       }
-      .responsive-iframe-container iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          border: 0;
+       
+      .iframe-wrap iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
   <body>
-    <div class="responsive-iframe-container">
+    <div class="iframe-wrap">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccq9CHEpJk4JOIqW9j_eLxE6xt0pOlHec-bZXMnriFubXFTw/viewform?embedded=true" width="100%" height="1200" frameborder="0" allowfullscreen>読み込んでいます…</iframe>
     </div>
   </body>
