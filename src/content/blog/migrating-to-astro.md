@@ -9,11 +9,15 @@ pubDate: Apr 29, 2025
 
 I started this site in 2013 using [Middleman](https://github.com/middleman/middleman) as the static site generator. Since the site was solely for showcasing my software, which does not update frequently, I eventually switched to maintaining raw HTML files. Recently, I decided to start a blog, prompting me to explore which SSG to use.
 
+## What is Static Site Generator
+
+When you have a bunch of HTML files on a website, you don't want to edit all of them just to change `© 2025` to `© 2026` each year. SSG is a software that uses template engine to generate HTML files. Additionally, it provides extra features such as converting Markdown to HTML, generating table of contents, and so on.
+
 ## Candidates
 
 ### [Middleman](https://github.com/middleman/middleman)
 
-Middleman uses Sass for managing stylesheets and ERb or Haml for templates. These days, as browsers evolve and features like [CSS Nesting](https://caniuse.com/css-nesting) exist, the need for something like Sass is quite low. Also, I don't have good memories of using Haml. Maybe it was better than HTML, but these days, I prefer raw HTML.
+Middleman uses Sass for managing stylesheets and ERb or Haml for templates. As browsers evolve and features like [CSS Nesting](https://caniuse.com/css-nesting) are added, the need for something like Sass is becoming lower and lower. Also, I don't have good memories of using Haml. Maybe it is better than HTML, but these days I prefer raw HTML.
 
 ### [Zola](https://github.com/getzola/zola?tab=readme-ov-file)
 
@@ -21,7 +25,7 @@ Written in Rust. Seems good, but maybe too basic?
 
 ### [Astro](https://github.com/withastro/astro)
 
-There were quite a few positive comments on Reddit about Astro. It uses its own file type called `.astro`, but with TreeSitter and LSP support, editing in NeoVim is quite comfortable. The syntax is similar to Vue, which combines JavaScript and HTML in a single file. It is versatile and has lots of plugins.
+Astro has lots of plugins and very versatile. It uses its own file type called `.astro`, which combines JavaScript and HTML in a single file. With Treesitter and LSP support, editing it in NeoVim is quite comfortable.
 
 ## Setting up Astro
 

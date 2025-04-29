@@ -7,14 +7,19 @@ import BaseBody from "../layouts/BaseBody.astro";
 import BaseMain from "../layouts/BaseMain.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+interface WithId {
+  id: string;
+}
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+type Props = CollectionEntry<"blog">["data"] & WithId;
+
+const { id, title, description, pubDate, updatedDate } = Astro.props;
+let image = `/img/blog/${id}.webp`;
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={description} image={image} />
   </head>
 
   <BaseBody>

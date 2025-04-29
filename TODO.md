@@ -5,10 +5,11 @@
 - Show table of contents
 - Show description
 - Introduce blog category
-- Add `og:image` and `twitter:image`
 - Migrate Wasuramoti Page to Astro
 - Check "how good" the site is
   * https://pagespeed.web.dev/
+- Generate Open Graph images when blog post updated, or when build
+  * Instead of running `just images` manually
 
 # Blog
 
