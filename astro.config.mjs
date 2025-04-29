@@ -8,7 +8,15 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://pjmtdw.github.io",
-  integrations: [mdx(), sitemap()],
+  integrations: [
+    mdx(),
+    sitemap({
+      customPages: [
+        "https://pjmtdw.github.io/wasuramoti/",
+        "https://pjmtdw.github.io/wasuramoti/howto-record.html",
+      ],
+    }),
+  ],
 
   vite: {
     plugins: [tailwindcss()],
