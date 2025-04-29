@@ -1,4 +1,4 @@
-[submodule "dist"]
-	path = dist
+[submodule "master"]
+	path = master
 	url = git@github.com:pjmtdw/pjmtdw.github.io.git
 	branch = master
