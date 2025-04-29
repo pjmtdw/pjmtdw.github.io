@@ -1,9 +1,0 @@
-.sass-cache
-bin/
-.bundle/
-.vendor/
-.rbenv-version
-source/javascripts/libs/jquery.min.js
-source/javascripts/libs/jquery.simplemodal.js
-source/javascripts/libs/modernizr.js
-bower_components/
