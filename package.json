@@ -1,0 +1,25 @@
+{
+  "name": "pjmtdw-site",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.2.5",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.3.1",
+    "@tailwindcss/vite": "^4.1.4",
+    "astro": "^5.7.5",
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "@catppuccin/tailwindcss": "^1.0.0-beta.1",
+    "@tailwindcss/typography": "^0.5.16"
+  }
+}

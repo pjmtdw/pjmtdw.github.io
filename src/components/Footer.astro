@@ -1,0 +1,12 @@
+---
+const today = new Date();
+import { GITHUB_HOME } from "../consts";
+import GitHubRepo from "./GitHubRepo.astro";
+---
+
+<footer class="pt-8 pl-8 pr-8 pb-24 bg-gray-300 dark:bg-gray-800 text-center">
+  &copy; {today.getFullYear()} pjmtdw. All rights reserved.
+  <div class="flex justify-center gap-4 mt-6">
+    <GitHubRepo url={GITHUB_HOME} />
+  </div>
+</footer>

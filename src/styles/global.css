@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "@catppuccin/tailwindcss/config.css";
+
+/* https://shiki.style/guide/dual-themes */
+@media (prefers-color-scheme: dark) {
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+  }
+}
