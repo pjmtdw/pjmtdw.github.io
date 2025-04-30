@@ -1,10 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import BaseBody from "../layouts/BaseBody.astro";
-import BaseMain from "../layouts/BaseMain.astro";
+import BodyMain from "../layouts/BodyMain.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 
 interface WithId {
@@ -22,24 +19,20 @@ let image = `/img/blog/${id}.webp`;
     <BaseHead title={title} description={description} image={image} />
   </head>
 
-  <BaseBody>
-    <Header />
-    <BaseMain>
-      <article class="prose dark:prose-invert">
-        <div>
-          <FormattedDate date={pubDate} />
-          {
-            updatedDate && (
-              <div>
-                Last updated on <FormattedDate date={updatedDate} />
-              </div>
-            )
-          }
-        </div>
-        <h1>{title}</h1>
-        <slot />
-      </article>
-    </BaseMain>
-    <Footer />
-  </BaseBody>
+  <BodyMain>
+    <article class="prose dark:prose-invert">
+      <div>
+        <FormattedDate date={pubDate} />
+        {
+          updatedDate && (
+            <div>
+              Last updated on <FormattedDate date={updatedDate} />
+            </div>
+          )
+        }
+      </div>
+      <h1>{title}</h1>
+      <slot />
+    </article>
+  </BodyMain>
 </html>

@@ -1,9 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import BaseBody from "../layouts/BaseBody.astro";
-import BaseMain from "../layouts/BaseMain.astro";
+import BodyMain from "../layouts/BodyMain.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -12,27 +9,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <BaseBody>
-    <Header />
-    <BaseMain>
-      <h2 class="mt-4 mb-2 font-bold text-2xl text-ctp-teal">About</h2>
-      <p>
-        Welcome to pjmtdw's site, where I share my software and some blog posts.
-      </p>
-      <h2 class="mt-4 mb-2 font-bold text-2xl text-ctp-teal">Products</h2>
-      <dl>
-        <dt>
-          <a
-            class="font-medium underline text-black dark:text-white"
-            href="/wasuramoti">Wasuramoti (Japanese)</a
-          >
-        </dt>
-        <dd>
-          Hyakunin-Isshu audio player for Competitive Karuta (a.k.a. Kyogi
-          Karuta).
-        </dd>
-      </dl>
-    </BaseMain>
-    <Footer />
-  </BaseBody>
+  <BodyMain>
+    <h2 class="mt-4 mb-2 font-bold text-2xl text-ctp-teal">About</h2>
+    <p>
+      Welcome to pjmtdw's site, where I share my software and some blog posts.
+    </p>
+    <h2 class="mt-4 mb-2 font-bold text-2xl text-ctp-teal">Products</h2>
+    <dl>
+      <dt>
+        <a
+          class="font-medium underline text-black dark:text-white"
+          href="/wasuramoti">Wasuramoti (Japanese)</a
+        >
+      </dt>
+      <dd>
+        Hyakunin-Isshu audio player for Competitive Karuta (a.k.a. Kyogi
+        Karuta).
+      </dd>
+    </dl>
+  </BodyMain>
 </html>
