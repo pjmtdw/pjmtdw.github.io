@@ -50,3 +50,6 @@
   * https://wiki.archlinux.org/title/Multiboot_USB_drive
   * https://github.com/thias/glim
 - EndeavorOS without Ventoy
+- Colemak vs Dvorak
+- Nix and Neovim
+- About Neovim built in package manager

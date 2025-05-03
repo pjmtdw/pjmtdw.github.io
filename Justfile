@@ -18,3 +18,8 @@ images:
 # since `npm run build` deletes all the content of `dist/`, we cannot use `dist/` as submodule. instead we use `master/` as submodule and use rsync.
 rsync:
   rsync -av --delete --exclude='/.git' --exclude '/.github' ./dist/ ./master/
+
+publish:
+  just images
+  just build
+  just rsync

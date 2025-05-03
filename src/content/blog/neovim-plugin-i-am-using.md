@@ -1,5 +1,5 @@
 ---
-title: Neovim Plugin I Am Using
+title: Neovim plugin I am using
 description: Introduction to the Plugin I Am Currently Using
 pubDate: May 03, 2025
 ---
@@ -8,7 +8,7 @@ pubDate: May 03, 2025
 
 I carefully choose which Neovim plugins to use. When a plugin is small, I sometimes write the Lua code myself. Since I usually work in the terminal, I don't try to do everything in Neovim; I use small scripts in Bash or Python instead. Even so, I currently use 18 plugins, so let me introduce them.
 
-## Basic Plugins
+## Basic plugins
 
 - [lazy.nvim](https://github.com/folke/lazy.nvim) ... Plugin manager. I previously used [vim-plug](https://github.com/junegunn/vim-plug), [packer.nvim](https://github.com/wbthomason/packer.nvim), [dein.vim](https://github.com/Shougo/dein.vim), but now I use this.
 - [kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) ... Dark color theme. Other popular ones are [catppuccin](https://github.com/catppuccin/nvim), [tokyonight.nvim](https://github.com/folke/tokyonight.nvim), and [gruvbox-material](https://github.com/sainnhe/gruvbox-material).
@@ -23,18 +23,20 @@ I carefully choose which Neovim plugins to use. When a plugin is small, I someti
 
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) ... Built-in Neovim uses regular expressions for highlighting and indenting code, but this uses more advanced parser called Treesitter.
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) ... As of Neovim 0.11, you can use the LSP server more conveniently; however, you still need this because lots of LSP servers need their ad-hoc settings.
-- [roslyn.nvim](https://github.com/jmederosalvarado/roslyn.nvim) ... Uses Roslyn as a C# LSP. You need this because Roslyn uses a non-usual setup that cannot be done with the built-in LSP of Neovim.
+- [roslyn.nvim](https://github.com/jmederosalvarado/roslyn.nvim) ... Uses [Roslyn](https://github.com/dotnet/roslyn) as a C# LSP. You need this because Roslyn uses a non-usual setup that cannot be done with the built-in LSP of Neovim.
 - [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim) ... Use external commands such as `stylua` or `fish_indent` as LSP. Some LSP servers, such as Pyright, lack code formatting. In that case, you can use this plugin to use a formatter as LSP.
 
 ## Debugging
 
-I don't use an interactive debugger frequently, but setting these up might be useful. `nvim-dap-go` provides configurations for Go. But for Rust, I wrote [my own config](https://github.com/pjmtdw/neovim-config/blob/c222b42699264ae4a23b4b91d14a3f2fadf0220f/lua/dap-conf.lua#L52), which parses the output of `cargo build -q`. The most preferred plugin is [rustaceanvim](https://github.com/mrcjkb/rustaceanvim), which does this setup for you.
+I don't use an interactive debugger frequently, but setting these up might be useful. `nvim-dap-go` provides configurations for Go.
+
+For Rust, most popular plugin is [rustaceanvim](https://github.com/mrcjkb/rustaceanvim), but I wrote [my own config](https://github.com/pjmtdw/neovim-config/blob/c222b42699264ae4a23b4b91d14a3f2fadf0220f/lua/dap-conf.lua#L52), which parses the output of `cargo build -q`.
 
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 - [nvim-dap-go](https://github.com/leoluz/nvim-dap-go)
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 
-## Required as Dependencies
+## Required as dependencies
 
 These are required as dependencies for the above plugins.
 
@@ -42,14 +44,14 @@ These are required as dependencies for the above plugins.
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [nvim-nio](https://github.com/nvim-neotest/nvim-nio)
 
-## Plugins I Don't Use, but May Be Useful
+## Plugins I don't use, but may be useful
 
-- [mason.nvim](https://github.com/williamboman/mason.nvim) ... I prefer installing the LSP server with package managers such as `pacman` or `homebrew`, but if you want to manage those in Neovim, this is your choice.
+- [mason.nvim](https://github.com/williamboman/mason.nvim) ... I prefer installing the LSP server with package managers such as `pacman` in Arch or `homebrew` in macOS, but if you want to manage those in Neovim, this is your choice.
 - [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) ... I think the Treesitter integration of flash.nvim is enough, but if you want to do more advanced queries, use this.
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context) ... When the function or class is long, it shows the signature at the top of the buffer. I don't use this because long functions are evil, but if you need to work with those evil codebases, use this.
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) ... Git integration.
+- [fugitive](https://github.com/tpope/vim-fugitive), [neogit](https://github.com/NeogitOrg/neogit), [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim), [Diffview.nvim](https://github.com/sindrets/diffview.nvim) ... I prefer CLI `git` command, but these may be useful when you want use git in Neovim.
 - [trouble.nvim](https://github.com/folke/trouble.nvim) ... Shows diagnostics more beautifully.
 
 ## Conclusion
 
-[This](https://github.com/pjmtdw/neovim-config) is my neovim config. If you are interested, please take a look.
+[This](https://github.com/pjmtdw/neovim-config) is my Neovim config. If you are interested, please take a look.
