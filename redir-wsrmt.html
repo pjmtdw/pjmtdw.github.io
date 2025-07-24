@@ -7,7 +7,6 @@
     <script>
       function redirectToStore() {
         const userAgent = navigator.userAgent.toLowerCase();
-        alert(userAgent);
         if (/iphone|ipad|macintosh/.test(userAgent)) {
           window.location.href = "https://apps.apple.com/jp/app/id6450668597";
         } else if (userAgent.includes("android")) {
