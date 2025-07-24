@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>百人一首読み上げアプリ「わすらもち」</title>
+    <script>
+      function redirectToStore() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+          window.location.href = "https://apps.apple.com/jp/app/id6450668597";
+        } else if (userAgent.includes("android")) {
+          window.location.href =
+            "http://play.google.com/store/apps/details?id=karuta.hpnpwd.wasuramoti";
+        }
+      }
+      window.onload = redirectToStore;
+    </script>
+  </head>
+  <body>
+    百人一首読み上げアプリ「わすらもち」
+    <ul>
+      <li>
+        iPhone/iPad:
+        <a href="https://apps.apple.com/jp/app/id6450668597">[こちら]</a>
+      </li>
+      <li>
+        Android:
+        <a
+          href="http://play.google.com/store/apps/details?id=karuta.hpnpwd.wasuramoti"
+          >[こちら]</a
+        >
+      </li>
+      <li>
+        その他: <a href="https://pjmtdw.github.io/wasuramoti/">[こちら]</a>
+      </li>
+    </ul>
+  </body>
+</html>
